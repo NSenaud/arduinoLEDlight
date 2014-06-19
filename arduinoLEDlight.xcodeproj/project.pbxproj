@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		34D963911930915F00A72493 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D963901930915F00A72493 /* Cocoa.framework */; };
+		34D9639B1930915F00A72493 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34D963991930915F00A72493 /* InfoPlist.strings */; };
+		34D9639D1930915F00A72493 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D9639C1930915F00A72493 /* main.m */; };
+		34D963A11930915F00A72493 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 34D9639F1930915F00A72493 /* Credits.rtf */; };
+		34D963A41930915F00A72493 /* ALLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D963A31930915F00A72493 /* ALLAppDelegate.m */; };
+		34D963A71930915F00A72493 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34D963A51930915F00A72493 /* MainMenu.xib */; };
+		34D963A91930915F00A72493 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D963A81930915F00A72493 /* Images.xcassets */; };
+		34D963B01930915F00A72493 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D963AF1930915F00A72493 /* XCTest.framework */; };
+		34D963B11930915F00A72493 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D963901930915F00A72493 /* Cocoa.framework */; };
+		34D963B91930915F00A72493 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34D963B71930915F00A72493 /* InfoPlist.strings */; };
+		34D963BB1930915F00A72493 /* arduinoLEDlightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D963BA1930915F00A72493 /* arduinoLEDlightTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		34D963B21930915F00A72493 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34D963851930915F00A72493 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34D9638C1930915F00A72493;
+			remoteInfo = arduinoLEDlight;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		34D9638D1930915F00A72493 /* arduinoLEDlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arduinoLEDlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		34D963901930915F00A72493 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		34D963931930915F00A72493 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		34D963941930915F00A72493 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		34D963951930915F00A72493 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		34D963981930915F00A72493 /* arduinoLEDlight-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "arduinoLEDlight-Info.plist"; sourceTree = "<group>"; };
+		34D9639A1930915F00A72493 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		34D9639C1930915F00A72493 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		34D9639E1930915F00A72493 /* arduinoLEDlight-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "arduinoLEDlight-Prefix.pch"; sourceTree = "<group>"; };
+		34D963A01930915F00A72493 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		34D963A21930915F00A72493 /* ALLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALLAppDelegate.h; sourceTree = "<group>"; };
+		34D963A31930915F00A72493 /* ALLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALLAppDelegate.m; sourceTree = "<group>"; };
+		34D963A61930915F00A72493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		34D963A81930915F00A72493 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		34D963AE1930915F00A72493 /* arduinoLEDlightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = arduinoLEDlightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34D963AF1930915F00A72493 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		34D963B61930915F00A72493 /* arduinoLEDlightTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "arduinoLEDlightTests-Info.plist"; sourceTree = "<group>"; };
+		34D963B81930915F00A72493 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		34D963BA1930915F00A72493 /* arduinoLEDlightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = arduinoLEDlightTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34D9638A1930915F00A72493 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34D963911930915F00A72493 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34D963AB1930915F00A72493 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34D963B11930915F00A72493 /* Cocoa.framework in Frameworks */,
+				34D963B01930915F00A72493 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		34D963841930915F00A72493 = {
+			isa = PBXGroup;
+			children = (
+				34D963961930915F00A72493 /* arduinoLEDlight */,
+				34D963B41930915F00A72493 /* arduinoLEDlightTests */,
+				34D9638F1930915F00A72493 /* Frameworks */,
+				34D9638E1930915F00A72493 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		34D9638E1930915F00A72493 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34D9638D1930915F00A72493 /* arduinoLEDlight.app */,
+				34D963AE1930915F00A72493 /* arduinoLEDlightTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		34D9638F1930915F00A72493 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34D963901930915F00A72493 /* Cocoa.framework */,
+				34D963AF1930915F00A72493 /* XCTest.framework */,
+				34D963921930915F00A72493 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		34D963921930915F00A72493 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34D963931930915F00A72493 /* AppKit.framework */,
+				34D963941930915F00A72493 /* CoreData.framework */,
+				34D963951930915F00A72493 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		34D963961930915F00A72493 /* arduinoLEDlight */ = {
+			isa = PBXGroup;
+			children = (
+				34D963A21930915F00A72493 /* ALLAppDelegate.h */,
+				34D963A31930915F00A72493 /* ALLAppDelegate.m */,
+				34D963A51930915F00A72493 /* MainMenu.xib */,
+				34D963A81930915F00A72493 /* Images.xcassets */,
+				34D963971930915F00A72493 /* Supporting Files */,
+			);
+			path = arduinoLEDlight;
+			sourceTree = "<group>";
+		};
+		34D963971930915F00A72493 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				34D963981930915F00A72493 /* arduinoLEDlight-Info.plist */,
+				34D963991930915F00A72493 /* InfoPlist.strings */,
+				34D9639C1930915F00A72493 /* main.m */,
+				34D9639E1930915F00A72493 /* arduinoLEDlight-Prefix.pch */,
+				34D9639F1930915F00A72493 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		34D963B41930915F00A72493 /* arduinoLEDlightTests */ = {
+			isa = PBXGroup;
+			children = (
+				34D963BA1930915F00A72493 /* arduinoLEDlightTests.m */,
+				34D963B51930915F00A72493 /* Supporting Files */,
+			);
+			path = arduinoLEDlightTests;
+			sourceTree = "<group>";
+		};
+		34D963B51930915F00A72493 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				34D963B61930915F00A72493 /* arduinoLEDlightTests-Info.plist */,
+				34D963B71930915F00A72493 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		34D9638C1930915F00A72493 /* arduinoLEDlight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34D963BE1930915F00A72493 /* Build configuration list for PBXNativeTarget "arduinoLEDlight" */;
+			buildPhases = (
+				34D963891930915F00A72493 /* Sources */,
+				34D9638A1930915F00A72493 /* Frameworks */,
+				34D9638B1930915F00A72493 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = arduinoLEDlight;
+			productName = arduinoLEDlight;
+			productReference = 34D9638D1930915F00A72493 /* arduinoLEDlight.app */;
+			productType = "com.apple.product-type.application";
+		};
+		34D963AD1930915F00A72493 /* arduinoLEDlightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34D963C11930915F00A72493 /* Build configuration list for PBXNativeTarget "arduinoLEDlightTests" */;
+			buildPhases = (
+				34D963AA1930915F00A72493 /* Sources */,
+				34D963AB1930915F00A72493 /* Frameworks */,
+				34D963AC1930915F00A72493 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34D963B31930915F00A72493 /* PBXTargetDependency */,
+			);
+			name = arduinoLEDlightTests;
+			productName = arduinoLEDlightTests;
+			productReference = 34D963AE1930915F00A72493 /* arduinoLEDlightTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34D963851930915F00A72493 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ALL;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Nicolas Senaud";
+				TargetAttributes = {
+					34D963AD1930915F00A72493 = {
+						TestTargetID = 34D9638C1930915F00A72493;
+					};
+				};
+			};
+			buildConfigurationList = 34D963881930915F00A72493 /* Build configuration list for PBXProject "arduinoLEDlight" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 34D963841930915F00A72493;
+			productRefGroup = 34D9638E1930915F00A72493 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				34D9638C1930915F00A72493 /* arduinoLEDlight */,
+				34D963AD1930915F00A72493 /* arduinoLEDlightTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		34D9638B1930915F00A72493 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34D9639B1930915F00A72493 /* InfoPlist.strings in Resources */,
+				34D963A91930915F00A72493 /* Images.xcassets in Resources */,
+				34D963A11930915F00A72493 /* Credits.rtf in Resources */,
+				34D963A71930915F00A72493 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34D963AC1930915F00A72493 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34D963B91930915F00A72493 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34D963891930915F00A72493 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34D963A41930915F00A72493 /* ALLAppDelegate.m in Sources */,
+				34D9639D1930915F00A72493 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34D963AA1930915F00A72493 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34D963BB1930915F00A72493 /* arduinoLEDlightTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		34D963B31930915F00A72493 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34D9638C1930915F00A72493 /* arduinoLEDlight */;
+			targetProxy = 34D963B21930915F00A72493 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		34D963991930915F00A72493 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34D9639A1930915F00A72493 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		34D9639F1930915F00A72493 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34D963A01930915F00A72493 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		34D963A51930915F00A72493 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34D963A61930915F00A72493 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		34D963B71930915F00A72493 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34D963B81930915F00A72493 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		34D963BC1930915F00A72493 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		34D963BD1930915F00A72493 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		34D963BF1930915F00A72493 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "arduinoLEDlight/arduinoLEDlight-Prefix.pch";
+				INFOPLIST_FILE = "arduinoLEDlight/arduinoLEDlight-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		34D963C01930915F00A72493 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "arduinoLEDlight/arduinoLEDlight-Prefix.pch";
+				INFOPLIST_FILE = "arduinoLEDlight/arduinoLEDlight-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		34D963C21930915F00A72493 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/arduinoLEDlight.app/Contents/MacOS/arduinoLEDlight";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "arduinoLEDlight/arduinoLEDlight-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "arduinoLEDlightTests/arduinoLEDlightTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		34D963C31930915F00A72493 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/arduinoLEDlight.app/Contents/MacOS/arduinoLEDlight";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "arduinoLEDlight/arduinoLEDlight-Prefix.pch";
+				INFOPLIST_FILE = "arduinoLEDlightTests/arduinoLEDlightTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34D963881930915F00A72493 /* Build configuration list for PBXProject "arduinoLEDlight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34D963BC1930915F00A72493 /* Debug */,
+				34D963BD1930915F00A72493 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34D963BE1930915F00A72493 /* Build configuration list for PBXNativeTarget "arduinoLEDlight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34D963BF1930915F00A72493 /* Debug */,
+				34D963C01930915F00A72493 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		34D963C11930915F00A72493 /* Build configuration list for PBXNativeTarget "arduinoLEDlightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34D963C21930915F00A72493 /* Debug */,
+				34D963C31930915F00A72493 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 34D963851930915F00A72493 /* Project object */;
+}
