@@ -13,18 +13,18 @@
 
 @property (assign) IBOutlet NSWindow *window;
 
-@property (weak) IBOutlet NSButton *switchOnAll;
-@property (weak) IBOutlet NSButton *switchOffAll;
-@property (weak) IBOutlet NSButton *lightenAll;
-@property (weak) IBOutlet NSButton *darkenAll;
+@property (weak) IBOutlet NSButton    *switchOnAll;
+@property (weak) IBOutlet NSButton    *switchOffAll;
+@property (weak) IBOutlet NSButton    *lightenAll;
+@property (weak) IBOutlet NSButton    *darkenAll;
 @property (weak) IBOutlet NSTextField *lightLabel;
 
-- (IBAction)askForConnection:(id)sender;
+- (IBAction)askForConnection:   (id)sender;
 - (IBAction)askForDisconnection:(id)sender;
 
-- (IBAction)switchOnAll:(id)sender;
+- (IBAction)switchOnAll: (id)sender;
 - (IBAction)switchOffAll:(id)sender;
-- (IBAction)lightenAll:(id)sender;
-- (IBAction)darkenAll:(id)sender;
+- (IBAction)lightenAll:  (id)sender;
+- (IBAction)darkenAll:   (id)sender;
 
 @end

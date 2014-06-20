@@ -22,72 +22,56 @@
 
 - (IBAction)askForConnection:(id)sender
 {
-    [_switchOnAll  setEnabled:YES];
-    [_switchOffAll setEnabled:YES];
-    [_lightenAll   setEnabled:YES];
-    [_darkenAll    setEnabled:YES];
-    [_lightLabel   setEnabled:YES];
+    [self.switchOnAll  setEnabled:YES];
+    [self.switchOffAll setEnabled:YES];
+    [self.lightenAll   setEnabled:YES];
+    [self.darkenAll    setEnabled:YES];
+    [self.lightLabel   setEnabled:YES];
 }
 
 - (IBAction)askForDisconnection:(id)sender
 {
-    [_switchOnAll  setEnabled:NO];
-    [_switchOffAll setEnabled:NO];
-    [_lightenAll   setEnabled:NO];
-    [_darkenAll    setEnabled:NO];
-    [_lightLabel   setEnabled:NO];
+    [self.switchOnAll  setEnabled:NO];
+    [self.switchOffAll setEnabled:NO];
+    [self.lightenAll   setEnabled:NO];
+    [self.darkenAll    setEnabled:NO];
+    [self.lightLabel   setEnabled:NO];
 }
 
 - (IBAction)switchOnAll:(id)sender
 {
-    NSTask *switchOnAllTask = [[NSTask alloc] init];
-
-    [switchOnAllTask setLaunchPath:@"/bin/sh"];
-
-    NSArray *arguments;
-    arguments = [NSArray arrayWithObjects: @"-c", @"/bin/echo 'Am' > /dev/tty.usbmodem1421", nil];
-    [switchOnAllTask setArguments: arguments];
-
-    [switchOnAllTask launch];
+    [self sendCommand:@"Am"];
 }
 
 - (IBAction)switchOffAll:(id)sender
 {
-    NSTask *switchOnAllTask = [[NSTask alloc] init];
-
-    [switchOnAllTask setLaunchPath:@"/bin/sh"];
-
-    NSArray *arguments;
-    arguments = [NSArray arrayWithObjects: @"-c", @"/bin/echo 'Ao' > /dev/tty.usbmodem1421", nil];
-    [switchOnAllTask setArguments: arguments];
-
-    [switchOnAllTask launch];
+    [self sendCommand:@"Ao"];
 }
 
 - (IBAction)lightenAll:(id)sender
 {
-    NSTask *switchOnAllTask = [[NSTask alloc] init];
-
-    [switchOnAllTask setLaunchPath:@"/bin/sh"];
-
-    NSArray *arguments;
-    arguments = [NSArray arrayWithObjects: @"-c", @"/bin/echo 'A+' > /dev/tty.usbmodem1421", nil];
-    [switchOnAllTask setArguments: arguments];
-
-    [switchOnAllTask launch];
+    [self sendCommand:@"A+"];
 }
 
 - (IBAction)darkenAll:(id)sender
 {
-    NSTask *switchOnAllTask = [[NSTask alloc] init];
+    [self sendCommand:@"A-"];
+}
 
-    [switchOnAllTask setLaunchPath:@"/bin/sh"];
+- (void)sendCommand:(NSString *)parameter
+{
+    NSTask *commandLight = [[NSTask alloc] init];
+
+    NSString *command = @"/bin/echo '";
+    [command stringByAppendingString:parameter];
+    [command stringByAppendingString:@"' > /dev/tty.usbmodem1421"];
 
     NSArray *arguments;
-    arguments = [NSArray arrayWithObjects: @"-c", @"/bin/echo 'A-' > /dev/tty.usbmodem1421", nil];
-    [switchOnAllTask setArguments: arguments];
+    arguments = [NSArray arrayWithObjects: @"-c", command, nil];
 
-    [switchOnAllTask launch];
+    [commandLight setLaunchPath:@"/bin/sh"];
+    [commandLight setArguments: arguments];
+    [commandLight launch];
 }
 
 @end
