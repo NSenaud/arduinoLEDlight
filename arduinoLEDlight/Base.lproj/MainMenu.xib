@@ -21,6 +21,7 @@
                 <outlet property="channelsControler" destination="qes-0B-0gk" id="U5j-sZ-1ty"/>
                 <outlet property="channelsTabViewButtons" destination="qes-0B-0gk" id="BEO-wx-VyK"/>
                 <outlet property="commandView" destination="EiT-Mj-1SZ" id="ECI-FW-R8R"/>
+                <outlet property="connexionTypeSelector" destination="Vmp-L1-AcC" id="dSE-mY-b5Z"/>
                 <outlet property="deskLightChangeButton" destination="7W1-de-Z34" id="Lwj-jX-g73"/>
                 <outlet property="deskLightLevelIndicator" destination="oLd-El-41E" id="hCO-FJ-04a"/>
                 <outlet property="deskSwitchButton" destination="M4Y-xf-l7b" id="bW2-IY-MC9"/>
@@ -200,7 +201,7 @@
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Bed" identifier="1" id="wZb-qn-RNS">
-                                <view key="view" ambiguous="YES" id="2pj-c3-IgO">
+                                <view key="view" id="2pj-c3-IgO">
                                     <rect key="frame" x="10" y="33" width="230" height="110"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -209,7 +210,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Light" id="9MB-3a-M9F">
                                                 <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
@@ -218,14 +219,14 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="State" id="BG8-p7-X50">
                                                 <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jsy-xd-7SB">
-                                            <rect key="frame" x="129" y="86" width="86" height="24"/>
+                                            <rect key="frame" x="131" y="87" width="86" height="23"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="selectOne" id="ge8-VX-c16">
+                                            <segmentedCell key="cell" alignment="left" style="capsule" trackingMode="selectOne" id="ge8-VX-c16">
                                                 <font key="font" metaFont="system"/>
                                                 <segments>
                                                     <segment label="On"/>
@@ -237,9 +238,9 @@
                                             </connections>
                                         </segmentedControl>
                                         <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BOl-1O-6GR">
-                                            <rect key="frame" x="139" y="61" width="66" height="24"/>
+                                            <rect key="frame" x="143" y="60" width="62" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="momentary" id="mv7-gB-MFt">
+                                            <segmentedCell key="cell" alignment="left" style="texturedSquare" trackingMode="momentary" id="mv7-gB-MFt">
                                                 <font key="font" metaFont="system"/>
                                                 <segments>
                                                     <segment label="-"/>
@@ -268,7 +269,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Light" id="kpd-2v-in6">
                                                 <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
@@ -277,14 +278,14 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="State" id="YBI-Q3-eUA">
                                                 <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M4Y-xf-l7b">
-                                            <rect key="frame" x="129" y="86" width="86" height="24"/>
+                                            <rect key="frame" x="131" y="87" width="86" height="23"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="selectOne" id="Ocp-6I-ZTz">
+                                            <segmentedCell key="cell" alignment="left" style="capsule" trackingMode="selectOne" id="Ocp-6I-ZTz">
                                                 <font key="font" metaFont="system"/>
                                                 <segments>
                                                     <segment label="On"/>
@@ -296,9 +297,9 @@
                                             </connections>
                                         </segmentedControl>
                                         <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7W1-de-Z34">
-                                            <rect key="frame" x="139" y="61" width="66" height="24"/>
+                                            <rect key="frame" x="143" y="60" width="62" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="momentary" id="dXx-f5-jma">
+                                            <segmentedCell key="cell" alignment="left" style="texturedSquare" trackingMode="momentary" id="dXx-f5-jma">
                                                 <font key="font" metaFont="system"/>
                                                 <segments>
                                                     <segment label="-"/>
@@ -318,7 +319,7 @@
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Shelf" identifier="" id="hkq-nx-whl">
-                                <view key="view" id="xfe-55-nmm">
+                                <view key="view" ambiguous="YES" id="xfe-55-nmm">
                                     <rect key="frame" x="10" y="33" width="230" height="110"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -327,7 +328,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Light" id="fy5-mg-861">
                                                 <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
@@ -336,14 +337,14 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="State" id="Cag-hu-ybY">
                                                 <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AvZ-Ob-Cdy">
-                                            <rect key="frame" x="129" y="86" width="86" height="24"/>
+                                            <rect key="frame" x="131" y="87" width="86" height="23"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="selectOne" id="wp7-Hs-PZ5">
+                                            <segmentedCell key="cell" alignment="left" style="capsule" trackingMode="selectOne" id="wp7-Hs-PZ5">
                                                 <font key="font" metaFont="system"/>
                                                 <segments>
                                                     <segment label="On"/>
@@ -355,9 +356,9 @@
                                             </connections>
                                         </segmentedControl>
                                         <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aWy-r5-53j">
-                                            <rect key="frame" x="139" y="61" width="66" height="24"/>
+                                            <rect key="frame" x="143" y="60" width="62" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="momentary" id="IG0-ms-LCN">
+                                            <segmentedCell key="cell" alignment="left" style="texturedSquare" trackingMode="momentary" id="IG0-ms-LCN">
                                                 <font key="font" metaFont="system"/>
                                                 <segments>
                                                     <segment label="-"/>
@@ -379,9 +380,9 @@
                         </tabViewItems>
                     </tabView>
                     <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vks-au-Jzg">
-                        <rect key="frame" x="274" y="112" width="86" height="24"/>
+                        <rect key="frame" x="273" y="111" width="86" height="23"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="selectOne" id="9fq-T8-rsc">
+                        <segmentedCell key="cell" alignment="left" style="capsule" trackingMode="selectOne" id="9fq-T8-rsc">
                             <font key="font" metaFont="system"/>
                             <segments>
                                 <segment label="On"/>
@@ -397,14 +398,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Global Control" id="ykN-hu-8At">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ylf-fe-9E1">
-                        <rect key="frame" x="284" y="78" width="66" height="24"/>
+                        <rect key="frame" x="286" y="80" width="62" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="momentary" id="1EJ-nl-wAo">
+                        <segmentedCell key="cell" alignment="left" style="texturedSquare" trackingMode="momentary" id="1EJ-nl-wAo">
                             <font key="font" metaFont="system"/>
                             <segments>
                                 <segment label="-"/>
@@ -456,11 +457,31 @@
                             <action selector="askForDisconnection:" target="Voe-Tx-rLC" id="oeH-ms-5vi"/>
                         </connections>
                     </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="50D6A9D6-BD55-47E0-B3B2-0656E7FAA295" label="Connexion" paletteLabel="Custom View" tag="2" id="Yds-0O-fcT">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="71" height="26"/>
+                        <size key="maxSize" width="104" height="28"/>
+                        <segmentedControl key="view" verticalHuggingPriority="750" tag="2" id="Vmp-L1-AcC">
+                            <rect key="frame" x="0.0" y="14" width="91" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <segmentedCell key="cell" alignment="left" style="texturedRounded" trackingMode="selectOne" id="tt6-83-VbY">
+                                <font key="font" metaFont="system"/>
+                                <segments>
+                                    <segment label="SSH" width="40"/>
+                                    <segment label="USB" selected="YES" tag="1"/>
+                                </segments>
+                            </segmentedCell>
+                        </segmentedControl>
+                        <connections>
+                            <action selector="changeConnexionType:" target="Voe-Tx-rLC" id="inv-zg-Iei"/>
+                        </connections>
+                    </toolbarItem>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
                     <toolbarItem reference="Kv9-6v-zuk"/>
                     <toolbarItem reference="D0K-IP-tcN"/>
                     <toolbarItem reference="r4m-bb-9hb"/>
+                    <toolbarItem reference="Yds-0O-fcT"/>
                 </defaultToolbarItems>
             </toolbar>
         </window>

@@ -8,6 +8,7 @@
 
 #import "ALLAppDelegate.h"
 
+
 typedef NS_ENUM(NSUInteger, switchStates)
 {
     ON,
@@ -20,8 +21,14 @@ typedef NS_ENUM(NSUInteger, lightChangeValues)
     PLUS
 };
 
-@implementation ALLAppDelegate
+typedef NS_ENUM(NSUInteger, connexionTypesValues)
+{
+    SSH,
+    LOCAL
+};
 
+
+@implementation ALLAppDelegate
 
 # pragma mark Initialisation
 
@@ -35,18 +42,24 @@ typedef NS_ENUM(NSUInteger, lightChangeValues)
 
 - (void)sendCommand:(NSString *)parameter
 {
-    NSTask *commandLight = [[NSTask alloc] init];
-
     NSString *command = @"/bin/echo '";
     command = [command stringByAppendingString:parameter];
     command = [command stringByAppendingString:@"' > /dev/tty.usbmodem1421"];
 
-    NSArray *arguments;
-    arguments = [NSArray arrayWithObjects: @"-c", command, nil];
+    if ([self.connexionTypeSelector selectedSegment] == SSH)
+    {
+        NSLog(@"Send command over SSH");
+    }
+    else if ([self.connexionTypeSelector selectedSegment] == LOCAL)
+    {
+        NSArray *arguments;
+        arguments = [NSArray arrayWithObjects: @"-c", command, nil];
 
-    [commandLight setLaunchPath:@"/bin/sh"];
-    [commandLight setArguments: arguments];
-    [commandLight launch];
+        NSTask *commandLight = [[NSTask alloc] init];
+        [commandLight setLaunchPath:@"/bin/sh"];
+        [commandLight setArguments: arguments];
+        [commandLight launch];
+    }
 }
 
 
@@ -80,6 +93,18 @@ typedef NS_ENUM(NSUInteger, lightChangeValues)
     [self.shelfSwitchButton        setEnabled:NO];
     [self.shelfLightChangeButton   setEnabled:NO];
     [self.shelfLightLevelIndicator setEnabled:NO];
+}
+
+- (IBAction)changeConnexionType:(id)sender
+{
+    if ([self.connexionTypeSelector selectedSegment] == SSH)
+    {
+        NSLog(@"Online Mode");
+    }
+    else if ([self.connexionTypeSelector selectedSegment] == LOCAL)
+    {
+        NSLog(@"Offline Mode");
+    }
 }
 
 

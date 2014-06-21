@@ -13,6 +13,8 @@
 
 @property (assign) IBOutlet NSWindow *window;
 
+@property (weak) IBOutlet NSSegmentedControl *connexionTypeSelector;
+
 # pragma mark Global buttons' outlets
 @property (weak) IBOutlet NSSegmentedControl *globalSwitchButton;
 @property (weak) IBOutlet NSSegmentedControl *globalLightChangeButton;
@@ -39,6 +41,7 @@
 # pragma mark Connexion action buttons
 - (IBAction)askForConnection:   (id)sender;
 - (IBAction)askForDisconnection:(id)sender;
+- (IBAction)changeConnexionType:(id)sender;
 
 # pragma mark Buttons actions for all channels
 - (IBAction)switchGlobal:       (id)sender;
