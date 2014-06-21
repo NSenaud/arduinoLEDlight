@@ -13,18 +13,47 @@
 
 @property (assign) IBOutlet NSWindow *window;
 
-@property (weak) IBOutlet NSButton    *switchOnAll;
-@property (weak) IBOutlet NSButton    *switchOffAll;
-@property (weak) IBOutlet NSButton    *lightenAll;
-@property (weak) IBOutlet NSButton    *darkenAll;
-@property (weak) IBOutlet NSTextField *lightLabel;
+# pragma mark Global buttons' outlets
+@property (weak) IBOutlet NSSegmentedControl *globalSwitchButton;
+@property (weak) IBOutlet NSSegmentedControl *globalLightChangeButton;
 
+# pragma mark Channel choice buttons' outlets
+@property (weak) IBOutlet NSTabView *channelsTabViewButtons;
+
+# pragma mark Buttons' outlets for Bed channel
+@property (weak) IBOutlet NSSegmentedControl *bedSwitchButton;
+@property (weak) IBOutlet NSSegmentedControl *bedLightChangeButton;
+@property (weak) IBOutlet NSLevelIndicator   *bedLightLevelIndicator;
+
+# pragma mark Buttons' outlets for Desk channel
+@property (weak) IBOutlet NSSegmentedControl *deskSwitchButton;
+@property (weak) IBOutlet NSSegmentedControl *deskLightChangeButton;
+@property (weak) IBOutlet NSLevelIndicator   *deskLightLevelIndicator;
+
+# pragma mark Buttons' outlets for Shelf channel
+@property (weak) IBOutlet NSSegmentedControl *shelfSwitchButton;
+@property (weak) IBOutlet NSSegmentedControl *shelfLightChangeButton;
+@property (weak) IBOutlet NSLevelIndicator   *shelfLightLevelIndicator;
+
+
+# pragma mark Connexion action buttons
 - (IBAction)askForConnection:   (id)sender;
 - (IBAction)askForDisconnection:(id)sender;
 
-- (IBAction)switchOnAll: (id)sender;
-- (IBAction)switchOffAll:(id)sender;
-- (IBAction)lightenAll:  (id)sender;
-- (IBAction)darkenAll:   (id)sender;
+# pragma mark Buttons actions for all channels
+- (IBAction)switchGlobal:       (id)sender;
+- (IBAction)lightChangeForAll:  (id)sender;
+
+# pragma mark Buttons actions for Bed channel
+- (IBAction)switchBed:          (id)sender;
+- (IBAction)lightChangeForBed:  (id)sender;
+
+# pragma mark Buttons actions for Desk channel
+- (IBAction)switchDesk:         (id)sender;
+- (IBAction)lightChangeForDesk: (id)sender;
+
+# pragma mark Buttons actions for Shelf channel
+- (IBAction)switchShelf:        (id)sender;
+- (IBAction)lightChangeForShelf:(id)sender;
 
 @end

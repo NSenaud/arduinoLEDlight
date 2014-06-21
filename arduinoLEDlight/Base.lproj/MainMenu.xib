@@ -13,11 +13,22 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="Voe-Tx-rLC" customClass="ALLAppDelegate">
             <connections>
-                <outlet property="darkenAll" destination="oMR-3o-zat" id="8r2-ux-FlU"/>
-                <outlet property="lightLabel" destination="2gr-xr-hsi" id="Exw-Fs-f69"/>
-                <outlet property="lightenAll" destination="f02-aI-i8t" id="8xE-5Y-bD1"/>
-                <outlet property="switchOffAll" destination="Ydf-wV-B18" id="lGm-Cn-X4I"/>
-                <outlet property="switchOnAll" destination="7Qm-k2-X7E" id="Pa4-Fd-Kwh"/>
+                <outlet property="bedLightChangeButton" destination="BOl-1O-6GR" id="L5s-qb-1XJ"/>
+                <outlet property="bedLightLevelIndicator" destination="zKg-R9-9l3" id="iHW-VO-uob"/>
+                <outlet property="bedSwitchButton" destination="jsy-xd-7SB" id="eHB-Td-cKb"/>
+                <outlet property="bedTab" destination="wZb-qn-RNS" id="PfU-jg-Gbp"/>
+                <outlet property="bedTabView" destination="2pj-c3-IgO" id="F7K-ag-fT4"/>
+                <outlet property="channelsControler" destination="qes-0B-0gk" id="U5j-sZ-1ty"/>
+                <outlet property="channelsTabViewButtons" destination="qes-0B-0gk" id="BEO-wx-VyK"/>
+                <outlet property="commandView" destination="EiT-Mj-1SZ" id="ECI-FW-R8R"/>
+                <outlet property="deskLightChangeButton" destination="7W1-de-Z34" id="Lwj-jX-g73"/>
+                <outlet property="deskLightLevelIndicator" destination="oLd-El-41E" id="hCO-FJ-04a"/>
+                <outlet property="deskSwitchButton" destination="M4Y-xf-l7b" id="bW2-IY-MC9"/>
+                <outlet property="globalLightChangeButton" destination="Ylf-fe-9E1" id="dny-Q5-Csp"/>
+                <outlet property="globalSwitchButton" destination="vks-au-Jzg" id="lJV-ls-Tvz"/>
+                <outlet property="shelfLightChangeButton" destination="aWy-r5-53j" id="boX-V2-aI4"/>
+                <outlet property="shelfLightLevelIndicator" destination="dfP-9g-6pJ" id="Hcc-NY-3nT"/>
+                <outlet property="shelfSwitchButton" destination="AvZ-Ob-Cdy" id="abz-82-Vs1"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -177,65 +188,233 @@
         <window title="arduinoLEDlight" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" unifiedTitleAndToolbar="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="472" height="252"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="contentRect" x="335" y="390" width="383" height="172"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="472" height="252"/>
+                <rect key="frame" x="0.0" y="0.0" width="383" height="172"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Qm-k2-X7E" customClass="switchOnAll">
-                        <rect key="frame" x="354" y="204" width="107" height="32"/>
+                    <tabView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qes-0B-0gk">
+                        <rect key="frame" x="13" y="10" width="250" height="156"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Switch On" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0nu-ym-M56">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <tabViewItems>
+                            <tabViewItem label="Bed" identifier="1" id="wZb-qn-RNS">
+                                <view key="view" ambiguous="YES" id="2pj-c3-IgO">
+                                    <rect key="frame" x="10" y="33" width="230" height="110"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sJ4-Ps-GKO">
+                                            <rect key="frame" x="15" y="65" width="36" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Light" id="9MB-3a-M9F">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d2e-M7-QAP">
+                                            <rect key="frame" x="15" y="90" width="36" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="State" id="BG8-p7-X50">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jsy-xd-7SB">
+                                            <rect key="frame" x="129" y="86" width="86" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="selectOne" id="ge8-VX-c16">
+                                                <font key="font" metaFont="system"/>
+                                                <segments>
+                                                    <segment label="On"/>
+                                                    <segment label="Off" selected="YES" tag="1"/>
+                                                </segments>
+                                            </segmentedCell>
+                                            <connections>
+                                                <action selector="switchBed:" target="Voe-Tx-rLC" id="tKr-1B-zwS"/>
+                                            </connections>
+                                        </segmentedControl>
+                                        <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BOl-1O-6GR">
+                                            <rect key="frame" x="139" y="61" width="66" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="momentary" id="mv7-gB-MFt">
+                                                <font key="font" metaFont="system"/>
+                                                <segments>
+                                                    <segment label="-"/>
+                                                    <segment label="+" tag="1"/>
+                                                </segments>
+                                            </segmentedCell>
+                                            <connections>
+                                                <action selector="lightChangeForBed:" target="Voe-Tx-rLC" id="Osw-1E-VtM"/>
+                                            </connections>
+                                        </segmentedControl>
+                                        <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zKg-R9-9l3">
+                                            <rect key="frame" x="22" y="15" width="186" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <levelIndicatorCell key="cell" alignment="left" doubleValue="2" maxValue="256" warningValue="2" criticalValue="2" id="S30-Ic-jUD"/>
+                                        </levelIndicator>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Desk" identifier="2" id="U0U-lt-6ac">
+                                <view key="view" id="jb1-Wm-6sF">
+                                    <rect key="frame" x="10" y="33" width="230" height="110"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RZF-TC-AP1">
+                                            <rect key="frame" x="15" y="65" width="36" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Light" id="kpd-2v-in6">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NVO-Nb-9Xz">
+                                            <rect key="frame" x="15" y="90" width="36" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="State" id="YBI-Q3-eUA">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M4Y-xf-l7b">
+                                            <rect key="frame" x="129" y="86" width="86" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="selectOne" id="Ocp-6I-ZTz">
+                                                <font key="font" metaFont="system"/>
+                                                <segments>
+                                                    <segment label="On"/>
+                                                    <segment label="Off" selected="YES" tag="1"/>
+                                                </segments>
+                                            </segmentedCell>
+                                            <connections>
+                                                <action selector="switchDesk:" target="Voe-Tx-rLC" id="VoI-dr-jtK"/>
+                                            </connections>
+                                        </segmentedControl>
+                                        <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7W1-de-Z34">
+                                            <rect key="frame" x="139" y="61" width="66" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="momentary" id="dXx-f5-jma">
+                                                <font key="font" metaFont="system"/>
+                                                <segments>
+                                                    <segment label="-"/>
+                                                    <segment label="+" tag="1"/>
+                                                </segments>
+                                            </segmentedCell>
+                                            <connections>
+                                                <action selector="lightChangeForDesk:" target="Voe-Tx-rLC" id="xpQ-n9-y2G"/>
+                                            </connections>
+                                        </segmentedControl>
+                                        <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oLd-El-41E">
+                                            <rect key="frame" x="22" y="15" width="186" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <levelIndicatorCell key="cell" alignment="left" doubleValue="2" maxValue="256" warningValue="2" criticalValue="2" id="tt1-CT-lZr"/>
+                                        </levelIndicator>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Shelf" identifier="" id="hkq-nx-whl">
+                                <view key="view" id="xfe-55-nmm">
+                                    <rect key="frame" x="10" y="33" width="230" height="110"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="csq-pn-Y6d">
+                                            <rect key="frame" x="15" y="65" width="36" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Light" id="fy5-mg-861">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VOY-Ao-lJo">
+                                            <rect key="frame" x="15" y="90" width="36" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="State" id="Cag-hu-ybY">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AvZ-Ob-Cdy">
+                                            <rect key="frame" x="129" y="86" width="86" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="selectOne" id="wp7-Hs-PZ5">
+                                                <font key="font" metaFont="system"/>
+                                                <segments>
+                                                    <segment label="On"/>
+                                                    <segment label="Off" selected="YES" tag="1"/>
+                                                </segments>
+                                            </segmentedCell>
+                                            <connections>
+                                                <action selector="switchShelf:" target="Voe-Tx-rLC" id="aYd-N8-1u3"/>
+                                            </connections>
+                                        </segmentedControl>
+                                        <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aWy-r5-53j">
+                                            <rect key="frame" x="139" y="61" width="66" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="momentary" id="IG0-ms-LCN">
+                                                <font key="font" metaFont="system"/>
+                                                <segments>
+                                                    <segment label="-"/>
+                                                    <segment label="+" tag="1"/>
+                                                </segments>
+                                            </segmentedCell>
+                                            <connections>
+                                                <action selector="lightChangeForShelf:" target="Voe-Tx-rLC" id="XP4-r4-xWC"/>
+                                            </connections>
+                                        </segmentedControl>
+                                        <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfP-9g-6pJ">
+                                            <rect key="frame" x="22" y="15" width="186" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <levelIndicatorCell key="cell" alignment="left" doubleValue="2" maxValue="256" warningValue="2" criticalValue="2" id="2pr-7T-HMm"/>
+                                        </levelIndicator>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                        </tabViewItems>
+                    </tabView>
+                    <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vks-au-Jzg">
+                        <rect key="frame" x="274" y="112" width="86" height="24"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="selectOne" id="9fq-T8-rsc">
                             <font key="font" metaFont="system"/>
-                        </buttonCell>
+                            <segments>
+                                <segment label="On"/>
+                                <segment label="Off" selected="YES" tag="1"/>
+                            </segments>
+                        </segmentedCell>
                         <connections>
-                            <action selector="switchOnAll:" target="Voe-Tx-rLC" id="wRI-XA-ZSw"/>
+                            <action selector="switchGlobal:" target="Voe-Tx-rLC" id="4gB-y0-MKd"/>
                         </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ydf-wV-B18" customClass="switchOffAll">
-                        <rect key="frame" x="354" y="171" width="107" height="32"/>
+                    </segmentedControl>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYm-cr-Td5">
+                        <rect key="frame" x="269" y="143" width="96" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Switch Off" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fKD-81-58T">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="switchOffAll:" target="Voe-Tx-rLC" id="Rpd-EC-skV"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f02-aI-i8t" customClass="lightenAll">
-                        <rect key="frame" x="430" y="134" width="25" height="25"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="roundTextured" title="+" bezelStyle="texturedRounded" alignment="center" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iAw-re-yFf">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="lightenAll:" target="Voe-Tx-rLC" id="0hE-Ji-8Qn"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oMR-3o-zat" customClass="darkenAll">
-                        <rect key="frame" x="360" y="134" width="22" height="25"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="roundTextured" title="-" bezelStyle="texturedRounded" alignment="center" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HlE-gR-5b2">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="darkenAll:" target="Voe-Tx-rLC" id="Kx2-h4-iXA"/>
-                        </connections>
-                    </button>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gr-xr-hsi">
-                        <rect key="frame" x="388" y="139" width="36" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" title="Light" id="XA9-zE-Ryk">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Global Control" id="ykN-hu-8At">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ylf-fe-9E1">
+                        <rect key="frame" x="284" y="78" width="66" height="24"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="momentary" id="1EJ-nl-wAo">
+                            <font key="font" metaFont="system"/>
+                            <segments>
+                                <segment label="-"/>
+                                <segment label="+" tag="1"/>
+                            </segments>
+                        </segmentedCell>
+                        <connections>
+                            <action selector="lightChangeForAll:" target="Voe-Tx-rLC" id="UrV-Vi-X82"/>
+                        </connections>
+                    </segmentedControl>
                 </subviews>
             </view>
             <toolbar key="toolbar" implicitIdentifier="74C04EC6-DB54-4954-BD3D-10C150A95E8D" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="7WF-MW-8tI">
