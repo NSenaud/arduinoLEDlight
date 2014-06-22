@@ -85,7 +85,20 @@ typedef NS_ENUM(NSUInteger, connexionTypesValues)
     {
         return YES;
     }
-    return NO;
+    else
+    {
+        NSAlert *connectionUnavailableAlert = [NSAlert
+                                               alertWithMessageText:@"Arduino Uno seems not to be connected to your Mac"
+                                               defaultButton:@"Ok"
+                                               alternateButton:@"Help"
+                                               otherButton:nil
+                                               informativeTextWithFormat:@"If it is, click help!"];
+        [connectionUnavailableAlert runModal];
+
+        // FIXME: add help... Open website for help?
+
+        return NO;
+    }
 }
 
 
