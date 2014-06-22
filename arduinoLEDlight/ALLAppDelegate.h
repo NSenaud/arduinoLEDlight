@@ -37,6 +37,9 @@
 @property (weak) IBOutlet NSSegmentedControl *shelfLightChangeButton;
 @property (weak) IBOutlet NSLevelIndicator   *shelfLightLevelIndicator;
 
+@property (weak) IBOutlet NSTextField *connexionStatusLabel;
+@property (weak) IBOutlet NSImageView *connexionStatusImage;
+
 
 # pragma mark Connexion action buttons
 - (IBAction)askForConnection:   (id)sender;

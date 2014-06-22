@@ -8,6 +8,10 @@
 
 #import "ALLAppDelegate.h"
 
+#define SSH_MODE      [self.connexionTypeSelector selectedSegment] == SSH
+#define USB_MODE      [self.connexionTypeSelector selectedSegment] == LOCAL
+#define USB_AVAILABLE [self checkUSBConnectionAvailability] == YES
+#define SSH_AVAILABLE  NO
 
 typedef NS_ENUM(NSUInteger, switchStates)
 {
@@ -63,21 +67,47 @@ typedef NS_ENUM(NSUInteger, connexionTypesValues)
 }
 
 
+# pragma mark Check USB connection availability
+
+- (BOOL)checkUSBConnectionAvailability
+{
+    NSArray *arguments = [NSArray arrayWithObjects: @"-c", @"/bin/ls /dev/tty.usbmodem1421", nil];
+    NSError *error;
+    NSTask  *commandLight = [[NSTask alloc] init];
+
+    [commandLight setLaunchPath:@"/bin/sh"];
+    [commandLight setArguments: arguments];
+    [commandLight setStandardError:error];
+
+    [commandLight launch];
+
+    if ([error isNotEqualTo:nil])
+    {
+        return YES;
+    }
+    return NO;
+}
+
+
 # pragma mark Command interface for asking connekion with Arduino
 
 - (IBAction)askForConnection:(id)sender
 {
-    [self.globalSwitchButton       setEnabled:YES];
-    [self.globalLightChangeButton  setEnabled:YES];
-    [self.bedSwitchButton          setEnabled:YES];
-    [self.bedLightChangeButton     setEnabled:YES];
-    [self.bedLightLevelIndicator   setEnabled:YES];
-    [self.deskSwitchButton         setEnabled:YES];
-    [self.deskLightChangeButton    setEnabled:YES];
-    [self.deskLightLevelIndicator  setEnabled:YES];
-    [self.shelfSwitchButton        setEnabled:YES];
-    [self.shelfLightChangeButton   setEnabled:YES];
-    [self.shelfLightLevelIndicator setEnabled:YES];
+    if (USB_AVAILABLE || SSH_AVAILABLE)
+    {
+        [self.globalSwitchButton       setEnabled:YES];
+        [self.globalLightChangeButton  setEnabled:YES];
+        [self.bedSwitchButton          setEnabled:YES];
+        [self.bedLightChangeButton     setEnabled:YES];
+        [self.bedLightLevelIndicator   setEnabled:YES];
+        [self.deskSwitchButton         setEnabled:YES];
+        [self.deskLightChangeButton    setEnabled:YES];
+        [self.deskLightLevelIndicator  setEnabled:YES];
+        [self.shelfSwitchButton        setEnabled:YES];
+        [self.shelfLightChangeButton   setEnabled:YES];
+        [self.shelfLightLevelIndicator setEnabled:YES];
+        [self.connexionStatusLabel setStringValue:@"Online"];
+    }
 }
 
 - (IBAction)askForDisconnection:(id)sender
@@ -93,15 +123,16 @@ typedef NS_ENUM(NSUInteger, connexionTypesValues)
     [self.shelfSwitchButton        setEnabled:NO];
     [self.shelfLightChangeButton   setEnabled:NO];
     [self.shelfLightLevelIndicator setEnabled:NO];
+    [self.connexionStatusLabel setStringValue:@"Offline"];
 }
 
 - (IBAction)changeConnexionType:(id)sender
 {
-    if ([self.connexionTypeSelector selectedSegment] == SSH)
+    if (SSH_MODE)
     {
         NSLog(@"Online Mode");
     }
-    else if ([self.connexionTypeSelector selectedSegment] == LOCAL)
+    else if (USB_MODE)
     {
         NSLog(@"Offline Mode");
     }
